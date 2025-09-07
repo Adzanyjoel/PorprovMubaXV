@@ -124,6 +124,27 @@
     .footer-mascots img:hover {
       transform: scale(1.2);
     }
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) { 
+  .filters {
+    font-size: 12px;
+  } 
+table {
+  font-size: 8px;
+  text-align: center;
+}
+
+.pagination {
+  font-size: 12px;
+}
+}
+
   </style>
 </head>
 <body class="flex flex-col min-h-screen">
@@ -132,11 +153,11 @@
   <header class="bg-[#226B20] text-white flex items-center px-6 py-3 select-none">
     <img
       src="img/Logo Kab Muba.jpg"
-      alt="Logo PORPROV Jatim IX 2025"
+      alt="Logo PORPROV MUBA XV 2025"
       class="h-12 w-12 mr-3"
       onerror="this.onerror=null;this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9fa45300-5ec7-4a00-bbbf-8848075af4fd.png';"
     />
-    <h1 class="font-extrabold text-lg sm:text-xl leading-none tracking-wide flex items-center gap-1">
+    <h1 class="font-extrabold text-md sm:text-xl leading-none tracking-wide flex items-center gap-1">
       <span>PORPROV</span>
       <span class="text-[#f2f6f2]">MUBA XV 2025</span>
     </h1>
@@ -167,7 +188,7 @@
   </header>
 
   <main>
-    <div class="filters">
+    <div class="filters" >
         <select id="filterCabor" onchange="applyFilters()">
             <option value="">CABANG OLAHRAGA</option>
             <option value="BOLA BASKET">BOLA BASKET</option>
@@ -331,7 +352,7 @@
     ];
 
     let currentPage = 1;
-    let itemsPerPage = 15;
+    let itemsPerPage = 10;
 
     function renderTable() {
         const tbody = document.getElementById('tableBody');
