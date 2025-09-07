@@ -3,16 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hasil Pertandingan | PORPROV MUBA XV 2025</title>
+  <title>Hasil Pertandingan | PORPROV SUMSEL KE-XV 2025</title>
+  <link rel="shortcut icon" href="img/logo footer/logo dispopar.png" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      xintegrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0x0ug8rZ6eXv/oK2z+fKz+oA6P5+A6c4x+r0Gv/K6I6A7Bw+n5+w5+r6w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   <style>
     body {
       background: #f4f5f7;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    .header-nav a.active,
+     .header-nav a.active,
     .header-nav a:hover {
-      background-color: #226b20;
+      background-color: #ff0000;
     }
 
             /* Konten Utama */
@@ -22,7 +32,7 @@
             background-color: #d9e8c8;
             padding: 15px 10px;
             border-radius: 4px;
-            box-shadow: 0 0 5px #b9c9a7;
+            box-shadow: 0 0 5px #eaeaea;
         }
 
         /* Filter bar */
@@ -36,10 +46,10 @@
         .filters select {
             padding: 5px;
             border-radius: 3px;
-            border: 1px solid #3e8d03;
-            background-color: #e1f3c6;
+            border: 1px solid #000;
+            background-color: #ffff;
             font-weight: bold;
-            color: #175b30;
+            color: #000;
             cursor: pointer;
         }
 
@@ -50,25 +60,26 @@
             font-size: 0.85rem;
         }
         thead tr {
-            background-color: #b3d58e;
-            color: #175b30;
+            background-color: gray;
+            color: #ffff;
         }
         thead th {
             padding: 8px 6px;
             font-weight: 700;
-            border: 1px solid #9fc665;
-            text-align: left;
+            border: 1px solid #000;
+            text-align: center;
         }
         tbody tr:nth-child(even) {
-            background-color: #d7eca7;
+            background-color: #fff;
         }
         tbody td {
             padding: 6px 6px;
-            border: 1px solid #a4c76e;
+            border: 1px solid #000;
+            text-align: center;
         }
         tbody td.action {
             text-align: center;
-            color: #1a5e1f;
+            color: gray;
             font-weight: bold;
             cursor: pointer;
         }
@@ -84,24 +95,25 @@
             padding: 5px 9px;
             border-radius: 3px;
             cursor: pointer;
-            border: 1px solid #3e8d03;
+            border: 1px solid gray;
             background-color: #e1f3c6;
-            color: #175b30;
+            color: gray;
             font-weight: bold;
         }
         .pagination button:hover {
-            background-color: #c4e17a;
+            background-color: gray;
+            color: white;
         }
         .pagination .active {
-            background-color: #3b7d06;
+            background-color: gray;
             color: #fff;
             cursor: default;
             font-weight: 900;
-            border-color: #2b5604;
+            border-color: black;
         }
 
     footer {
-      background-color: #226b20;
+      background-color: #ff0000;
       color: #dbf1c8;
       font-size: 0.85rem;
       line-height: 1.3;
@@ -113,7 +125,9 @@
     footer a:hover {
       color: #e0ffd9;
     }
-    .footer-mascots img {
+
+
+    .footer-logo img, .footer-mascots img {
       width: 50px;
       height: auto;
       object-fit: contain;
@@ -121,14 +135,9 @@
       transition: transform 0.3s ease;
       cursor: default;
     }
-    .footer-mascots img:hover {
+    .footer-logo img:hover, .footer-mascots img:hover {
       transform: scale(1.2);
     }
-
-
-
-
-
 
 
 @media screen and (max-width: 600px) { 
@@ -150,7 +159,7 @@ table {
 <body class="flex flex-col min-h-screen">
 
   <!-- Header -->
-  <header class="bg-[#226B20] text-white flex items-center px-6 py-3 select-none">
+  <header class="bg-[#ff0000] text-white flex items-center px-6 py-3 select-none">
     <img
       src="img/Logo Kab Muba.jpg"
       alt="Logo PORPROV MUBA XV 2025"
@@ -159,7 +168,7 @@ table {
     />
     <h1 class="font-extrabold text-md sm:text-xl leading-none tracking-wide flex items-center gap-1">
       <span>PORPROV</span>
-      <span class="text-[#f2f6f2]">MUBA XV 2025</span>
+      <span class="text-[#f2f6f2]">SUMSEL XV 2025</span>
     </h1>
  <!-- Hamburger button for mobile -->
   <button id="hamburgerBtn" class="ml-auto md:hidden focus:outline-none" aria-label="Toggle menu">
@@ -172,18 +181,18 @@ table {
 
   <!-- Desktop menu -->
   <nav class="ml-auto desktop-menu hidden md:flex space-x-6 header-nav font-semibold text-sm">
-    <a href="index.html" class="active px-4 py-2 rounded hover:bg-[#1e5e1a] transition">Beranda</a>
-    <a href="jadwal.html" class="px-4 py-2 rounded hover:bg-[#1e5e1a] transition">Jadwal</a>
-    <a href="klasemen.html" class="px-4 py-2 rounded hover:bg-[#1e5e1a] transition">Klasemen</a>
-    <a href="hasil-tanding.html" class="px-4 py-2 rounded hover:bg-[#1e5e1a] transition">Hasil Tanding</a>
+    <a href="index.html" class="active px-4 py-2 rounded hover:underline transition">Beranda</a>
+    <a href="jadwal.html" class="px-4 py-2 rounded hover:underline transition">Jadwal</a>
+    <a href="klasemen.html" class="px-4 py-2 rounded hover:underline transition">Klasemen</a>
+    <a href="hasil-tanding.html" class="px-4 py-2 rounded hover:underline transition">Hasil Tanding</a>
   </nav>
 </header>
 <!-- Mobile menu (hidden by default) -->
-<nav id="mobileMenu" class="hidden bg-[#226B20] text-white font-semibold text-sm flex flex-col space-y-1 px-6 py-3 md:hidden">
-  <a href="index.html" class="active block px-4 py-2 rounded hover:bg-[#1e5e1a] transition">Beranda</a>
-  <a href="jadwal.html" class="block px-4 py-2 rounded hover:bg-[#1e5e1a] transition">Jadwal</a>
-  <a href="klasemen.html" class="block px-4 py-2 rounded hover:bg-[#1e5e1a] transition">Klasemen</a>
-  <a href="hasil-tanding.html" class="block px-4 py-2 rounded hover:bg-[#1e5e1a] transition">Hasil Tanding</a>
+<nav id="mobileMenu" class="hidden bg-[#ff0000] text-white font-semibold text-sm flex flex-col space-y-1 px-1 py-3 md:hidden">
+  <a href="index.html" class="active block px-4 py-2 rounded hover:underline transition">Beranda</a>
+  <a href="jadwal.html" class="block px-4 py-2 rounded hover:underline transition">Jadwal</a>
+  <a href="klasemen.html" class="block px-4 py-2 rounded hover:underline transition">Klasemen</a>
+  <a href="hasil-tanding.html" class="block px-4 py-2 rounded hover:underline transition">Hasil Tanding</a>
 </nav>
   </header>
 
@@ -224,8 +233,8 @@ table {
         </select>
 
         <select id="itemsPerPage" onchange="changeItemsPerPage()">
-            <option value="10">10</option>
-            <option value="30" selected>30</option>
+            <option value="15" selected>15</option>
+            <option value="30">30</option>
             <option value="50">50</option>
         </select>
     </div>
@@ -252,7 +261,7 @@ table {
   <!-- Footer-->
   <footer class="mt-12">
     <div class="container mx-auto px-6 py-6 flex flex-wrap text-sm gap-6 select-text">
-      <div class="flex flex-col text-left flex-1 min-w-[15rem] max-w-xs text-[#dbf1c8]">
+      <div class="footer-logo flex flex-col text-left flex-1 min-w-[15rem] max-w-xs text-[#ffff]">
         <strong class="mb-2">Diselenggarakan oleh:</strong>
         <div class="flex flex-wrap gap-2 mb-2">
           <img
@@ -288,36 +297,41 @@ table {
           <a href="klasemen.html" class="block hover:underline">Klasemen</a>
           <a href="hasil-tanding.html" class="block hover:underline">Hasil Tanding</a>
         </nav>
-      <p class="text-xs italic leading-relaxed text-[#b4d6a5]">
-          Misi Porprov Muba 2025: Meningkatkan prestasi olahraga dan persatuan masyarakat Sumatera Selatan melalui ajang Porprov yang berintegritas dan berkelanjutan.
+      <p class="text-xs italic leading-relaxed text-[#ffff]">
+          Misi Porprov Sumsel XV 2025: Meningkatkan prestasi olahraga dan persatuan masyarakat Sumatera Selatan melalui ajang Porprov yang berintegritas dan berkelanjutan.
         </p>
+      <p class="text-xs italic leading-relaxed text-[#ffff]">
+          #PorprovSumselXV <span>#PorprovMuba2025</span>
+        </p>
+        <a href="https://www.instagram.com/porprovsumselxv" target="_blank"
+              class="text-white-600 hover:text-black transition duration-300 text-2xl"
+              ><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@MusiBanyuasinTV" target="_blank"
+              class="text-white-600 hover:text-black ml-2 transition duration-300 text-2xl"
+              ><i class="fab fa-youtube"></i></a>
       </div>
 
       <div class="footer-mascots flex items-center flex-1 min-w-[18rem] justify-end">
         <img
           src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c1e3419b-3f97-4d79-b5d6-b7fd6eb491c7.png"
           alt="Mascot Porprov Jatim IX 2025"
-          onerror="this.onerror=null;this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/43abdc85-453d-42c5-83f0-9e51efdd3120.png';"
         />
         <img
           src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a910754d-ab90-4c55-b2b1-dc5790172ceb.png"
           alt="Mascot Porprov Jatim IX 2025"
-          onerror="this.onerror=null;this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9a18ac36-0550-4e2e-ae5e-198ef6134617.png';"
         />
         <img
           src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/367b3cf3-ae12-4246-bc56-e7b698ec4c4c.png"
           alt="Mascot Porprov Jatim IX 2025"
-          onerror="this.onerror=null;this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a66622d7-e73c-4b27-849a-39201f05bcc1.png';"
         />
         <img
           src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b6f62d9d-ece5-4948-a41e-d2310e669fc0.png"
           alt="Mascot Porprov Jatim IX 2025"
-          onerror="this.onerror=null;this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ca9b70f1-8f95-45f3-b6e2-2314707bd063.png';"
         />
       </div>
     </div>
-    <div class="w-full border-t border-[#36551f] text-center pt-2 pb-1 text-[10px] select-text font-sans text-[#a2c38e]">
-      © 2025 Ciamj. All rights reserved. KONI Muba + Dispopar Muba
+    <div class="w-full border-t border-[#ffff] text-sm text-center pt-2 pb-1 text-[10px] select-text font-sans text-[#ffff]">
+      © 2025 Ciamj. Hak Cipta Dilindungi Undang-Undang.
     </div>
   </footer>
 <script>
@@ -346,13 +360,19 @@ table {
         { cabor:"ATLETIK", kategori:"200 M", gender:"PUTRA", kontingen:"MUSI BANYUASIN", medali:"EMAS", update:"16/06/2025" },
         { cabor:"ATLETIK", kategori:"200 M", gender:"PUTRA", kontingen:"PALEMBANG", medali:"PERAK", update:"16/06/2025" },
         { cabor:"ATLETIK", kategori:"200 M", gender:"PUTRA", kontingen:"BANYUASIN", medali:"PERUNGGU", update:"16/06/2025" },
+        { cabor:"ATLETIK", kategori:"200 M", gender:"PUTRI", kontingen:"MUSI BANYUASIN", medali:"EMAS", update:"16/06/2025" },
+        { cabor:"ATLETIK", kategori:"200 M", gender:"PUTRI", kontingen:"PALEMBANG", medali:"PERAK", update:"16/06/2025" },
+        { cabor:"ATLETIK", kategori:"200 M", gender:"PUTRI", kontingen:"BANYUASIN", medali:"PERUNGGU", update:"16/06/2025" },
         { cabor:"ATLETIK", kategori:"400 M", gender:"PUTRA", kontingen:"MUSI BANYUASIN", medali:"EMAS", update:"16/06/2025" },
         { cabor:"ATLETIK", kategori:"400 M", gender:"PUTRA", kontingen:"PALEMBANG", medali:"PERAK", update:"16/06/2025" },
         { cabor:"ATLETIK", kategori:"400 M", gender:"PUTRA", kontingen:"BANYUASIN", medali:"PERUNGGU", update:"16/06/2025" },
+        { cabor:"ATLETIK", kategori:"400 M", gender:"PUTRI", kontingen:"MUSI BANYUASIN", medali:"EMAS", update:"16/06/2025" },
+        { cabor:"ATLETIK", kategori:"400 M", gender:"PUTRI", kontingen:"PALEMBANG", medali:"PERAK", update:"16/06/2025" },
+        { cabor:"ATLETIK", kategori:"400 M", gender:"PUTRI", kontingen:"BANYUASIN", medali:"PERUNGGU", update:"16/06/2025" },
     ];
 
     let currentPage = 1;
-    let itemsPerPage = 10;
+    let itemsPerPage = 15;
 
     function renderTable() {
         const tbody = document.getElementById('tableBody');
