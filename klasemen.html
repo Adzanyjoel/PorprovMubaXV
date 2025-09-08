@@ -26,7 +26,20 @@
       background-color: #ff0000;
     }
 
-    
+            /* Gaya kustom untuk menyembunyikan baris detail pada tabel */
+        .hidden-detail {
+            display: none;
+        }
+
+        /* Mengatur agar ikon tidak berputar secara visual saat diklik */
+        .toggle-icon {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Mengatur rotasi ikon saat baris terbuka */
+        .rotated {
+            transform: rotate(90deg);
+        }
 
     footer {
       background-color: #ff0000;
@@ -111,59 +124,144 @@
         <table class="table min-w-full table-auto border-collapse text-sm md:text-base">
           <thead class="bg-gray-200 text-gray-700">
             <tr>
-              <th class="px-4 py-3 text-center font-semibold">Posisi</th>
+              <th class="px-2 py-1 text-center font-semibold">Posisi</th>
               <th class="px-4 py-3 text-center font-semibold">Kontingen</th>
               <th class="px-4 py-3 text-center font-semibold">Emas</th>
               <th class="px-4 py-3 text-center font-semibold">Perak</th>
-              <th class="px-4 py-3 text-center font-semibold">Perunggu</th>
+              <th class="px-1 py-1 text-center font-semibold">Perunggu</th>
               <th class="px-4 py-3 text-center font-semibold">Poin</th>
             </tr>
           </thead>
           <tbody class="text-gray-800">
-            <tr class="border-b hover:bg-gray-50 transition duration-200">
-              <td class="px-4 py-4 text-center font-bold text-2xl text-yellow-500">1</td>
-              <td class="px-4 py-4 flex items-center space-x-1">
-                <img src="img/Logo Kab Muba.jpg" alt="Logo kabupaten Muba" class="w-8 h-8 rounded-full border border-gray-300" />
-                <span class="text-sm font-semibold">MUSI BANYUASIN</span>
-              </td>
+            <!-- Klasemen 1 start -->
+            <tr class="border-b hover:bg-gray-50 transition duration-200  cursor-pointer"
+            onclick="toggleCollapse('muba-details', this)">
+            <td class="px-4 py-4 text-center font-bold text-2xl text-yellow-500">1</td>
+            <td class="px-4 py-4 flex items-center space-x-1">
+              <span class="mr-2 text-gray-500 toggle-icon text-xl"><i class="fa-solid fa-grip-lines"></i></span>
+              <img src="img/Logo Kab Muba.jpg" alt="Logo kabupaten Muba" class="w-8 h-8 rounded-full border border-gray-300" />
+              <span class="text-md font-semibold">MUSI BANYUASIN</span>
+            </td>
+              <td class="px-4 py-4 text-center">8</td>
               <td class="px-4 py-4 text-center">0</td>
               <td class="px-4 py-4 text-center">0</td>
-              <td class="px-4 py-4 text-center">0</td>
-              <td class="px-4 py-4 text-center font-semibold">0</td>
+              <td class="px-4 py-4 text-center font-bold">160</td>
             </tr>
-            <tr class="border-b hover:bg-gray-50 transition duration-200">
-              <td class="px-4 py-4 text-center font-bold text-2xl text-gray-400">2</td>
-              <td class="px-4 py-4 flex items-center space-x-2">
-                <img src="" alt="Logo Kabupaten juara 2" class="w-8 h-8 rounded-full border border-gray-300" />
-                <span class="text-sm font-semibold">B</span>
-              </td>
-              <td class="px-4 py-4 text-center">0</td>
-              <td class="px-4 py-4 text-center">0</td>
-              <td class="px-4 py-4 text-center">0</td>
-              <td class="px-4 py-4 text-center font-semibold">0</td>
+            <tr id="muba-details" class="hidden-detail">
+              <td colspan="10" class="p-0 border-b bg-gray-200 border-red-950 ">
+                <table class="table min-w-full table-auto border-collapse text-sm md:text-base">
+                  <thead class="bg-gray-400 text-gray-700">
+                    <tr class="font-semibold text-black-600">
+                                            <th class="py-2 text-center">Cabang Olahraga</th>
+                                            <th class="py-2 text-center">Emas</th>
+                                            <th class="py-2 text-center">Perak</th>
+                                            <th class="py-2 text-center">Perunggu</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="py-2 text-center">BOLA BASKET</td>
+                                            <td class="py-2 text-center">4</td>
+                                            <td class="py-2 text-center">0</td>
+                                            <td class="py-2 text-center">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 text-center">ATLETIK</td>
+                                            <td class="py-2 text-center">4</td>
+                                            <td class="py-2 text-center">0</td>
+                                            <td class="py-2 text-center">0</td>
+                                        </tr>
+                                        </tbody>
+                                </table>
+                        </td>
             </tr>
-            <tr class="border-b hover:bg-gray-50 transition duration-200">
-              <td class="px-4 py-4 text-center font-bold text-2xl text-amber-600">3</td>
-              <td class="px-4 py-4 flex items-center space-x-2">
-                <img src="" alt="Logo Kabupaten Juara 3" class="w-8 h-8 rounded-full border border-gray-300" />
-                <span class="text-sm font-semibold">C</span>
-              </td>
+            <!-- Klasemen 1 End -->
+            <!-- Klasemen 2 start -->
+            <tr class="border-b hover:bg-gray-50 transition duration-200  cursor-pointer"
+            onclick="toggleCollapse('plg-details', this)">
+            <td class="px-4 py-4 text-center font-bold text-2xl text-gray-500">2</td>
+            <td class="px-4 py-4 flex items-center space-x-1">
+              <span class="mr-2 text-gray-500 toggle-icon text-xl"><i class="fa-solid fa-grip-lines"></i></span>
+              <img src="img/Logo Kab Muba.jpg" alt="Logo kabupaten Muba" class="w-8 h-8 rounded-full border border-gray-300" />
+              <span class="text-md font-semibold">PALEMBANG</span>
+            </td>
               <td class="px-4 py-4 text-center">0</td>
+              <td class="px-4 py-4 text-center">8</td>
               <td class="px-4 py-4 text-center">0</td>
-              <td class="px-4 py-4 text-center">0</td>
-              <td class="px-4 py-4 text-center font-semibold">0</td>
+              <td class="px-4 py-4 text-center font-bold">80</td>
             </tr>
-            <tr class="border-b hover:bg-gray-50 transition duration-200">
-              <td class="px-4 py-4 text-center font-bold text-2xl text-gray-600">4</td>
-              <td class="px-4 py-4 flex items-center space-x-3">
-                <img src="D" alt="Logo Kabupaten Juara 4" class="w-8 h-8 rounded-full border border-gray-300" />
-                <span class="font-medium">D</span>
-              </td>
-              <td class="px-4 py-4 text-center">0</td>
-              <td class="px-4 py-4 text-center">0</td>
-              <td class="px-4 py-4 text-center">0</td>
-              <td class="px-4 py-4 text-center font-semibold">0</td>
+            <tr id="plg-details" class="hidden-detail">
+              <td colspan="10" class="p-0 border-b bg-gray-200 border-red-950 ">
+                <table class="table min-w-full table-auto border-collapse text-sm md:text-base">
+                  <thead class="bg-gray-400 text-gray-700">
+                    <tr class="font-semibold text-black-600">
+                                            <th class="py-2 text-center">Cabang Olahraga</th>
+                                            <th class="py-2 text-center">Emas</th>
+                                            <th class="py-2 text-center">Perak</th>
+                                            <th class="py-2 text-center">Perunggu</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="py-2 text-center">BOLA BASKET</td>
+                                            <td class="py-2 text-center">0</td>
+                                            <td class="py-2 text-center">4</td>
+                                            <td class="py-2 text-center">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 text-center">ATLETIK</td>
+                                            <td class="py-2 text-center">0</td>
+                                            <td class="py-2 text-center">4</td>
+                                            <td class="py-2 text-center">0</td>
+                                        </tr>
+                                        </tbody>
+                                </table>
+                        </td>
             </tr>
+            <!-- Klasemen 2 End -->
+            <!-- Klasemen 3 start -->
+            <tr class="border-b hover:bg-gray-50 transition duration-200  cursor-pointer"
+            onclick="toggleCollapse('banyuasin-details', this)">
+            <td class="px-4 py-4 text-center font-bold text-2xl text-orange-800">3</td>
+            <td class="px-4 py-4 flex items-center space-x-1">
+              <span class="mr-2 text-gray-500 toggle-icon text-xl"><i class="fa-solid fa-grip-lines"></i></span>
+              <img src="img/Logo Kab Muba.jpg" alt="Logo kabupaten Muba" class="w-8 h-8 rounded-full border border-gray-300" />
+              <span class="text-md font-semibold">BANYUASIN</span>
+            </td>
+              <td class="px-4 py-4 text-center">8</td>
+              <td class="px-4 py-4 text-center">0</td>
+              <td class="px-4 py-4 text-center">0</td>
+              <td class="px-4 py-4 text-center font-bold">40</td>
+            </tr>
+            <tr id="banyuasin-details" class="hidden-detail">
+              <td colspan="10" class="p-0 border-b bg-gray-200 border-red-950 ">
+                <table class="table min-w-full table-auto border-collapse text-sm md:text-base">
+                  <thead class="bg-gray-400 text-gray-700">
+                    <tr class="font-semibold text-black-600">
+                                            <th class="py-2 text-center">Cabang Olahraga</th>
+                                            <th class="py-2 text-center">Emas</th>
+                                            <th class="py-2 text-center">Perak</th>
+                                            <th class="py-2 text-center">Perunggu</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="py-2 text-center">BOLA BASKET</td>
+                                            <td class="py-2 text-center">0</td>
+                                            <td class="py-2 text-center">0</td>
+                                            <td class="py-2 text-center">4</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 text-center">ATLETIK</td>
+                                            <td class="py-2 text-center">0</td>
+                                            <td class="py-2 text-center">0</td>
+                                            <td class="py-2 text-center">4</td>
+                                        </tr>
+                                        </tbody>
+                                </table>
+                        </td>
+            </tr>
+            <!-- Klasemen 3 End -->
           </tbody>
         </table>
       </div>
@@ -246,6 +344,28 @@
       © 2025 Ciamj. Hak Cipta Dilindungi Undang-Undang.
     </div>
   </footer>
-<script src="script.js"></script>
+<script>
+
+  
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburgerBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+          function toggleCollapse(elementId, clickedRow) {
+            const detailRow = document.getElementById(elementId);
+            const icon = clickedRow.querySelector('.toggle-icon');
+
+            if (detailRow.classList.contains('hidden-detail')) {
+                // Tampilkan baris detail
+                detailRow.classList.remove('hidden-detail');
+                icon.classList.add('rotated');
+            } else {
+                // Sembunyikan baris detail
+                detailRow.classList.add('hidden-detail');
+                icon.classList.remove('rotated');
+            }
+        }
+</script>
 </body>
 </html>
