@@ -15,70 +15,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-  <style>
-    body {
-      background: #f4f5f7;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    .header-nav a.active,
-    .header-nav a:hover {
-      background-color: #ff0000;
-    }
-
-            /* Pagination */
-        .pagination {
-            margin-top: 15px;
-            text-align: center;
-        }
-        .pagination button,
-        .pagination span {
-            margin: 0 2px;
-            padding: 5px 9px;
-            border-radius: 3px;
-            cursor: pointer;
-            border: 1px solid gray;
-            background-color: #eeee;
-            color: gray;
-            font-weight: bold;
-        }
-        .pagination button:hover {
-            background-color: gray;
-            color: white;
-        }
-        .pagination .active {
-            background-color: gray;
-            color: #fff;
-            cursor: default;
-            font-weight: 900;
-            border-color: black;
-        }
-
-    footer {
-      background-color: #ff0000;
-      color: #fff;
-      font-size: 0.85rem;
-      line-height: 1.3;
-    }
-    footer a {
-      color: #fff;
-      font-weight: 600;
-    }
-    footer a:hover {
-      color: #eaeaea;
-    }
-
-    .footer-logo img, .footer-mascots img {
-      width: 50px;
-      height: auto;
-      object-fit: contain;
-      margin-left: 0.75rem;
-      transition: transform 0.3s ease;
-      cursor: default;
-    }
-    .footer-logo img:hover, .footer-mascots img:hover {
-      transform: scale(1.2);
-    }
-  </style>
+    <link rel="stylesheet" href="jadwal.css">
 </head>
 <body class="flex flex-col min-h-screen">
 
@@ -105,7 +42,7 @@
 
   <!-- Desktop menu -->
   <nav class="ml-auto desktop-menu hidden md:flex space-x-6 header-nav font-semibold text-sm">
-    <a href="index.html" class="active px-4 py-2 rounded hover:underline transition">Beranda</a>
+    <a href="beranda.html" class="active px-4 py-2 rounded hover:underline transition">Beranda</a>
     <a href="jadwal.html" class="px-4 py-2 rounded hover:underline transition">Jadwal</a>
     <a href="klasemen.html" class="px-4 py-2 rounded hover:underline transition">Klasemen</a>
     <a href="hasil-tanding.html" class="px-4 py-2 rounded hover:underline transition">Hasil Tanding</a>
@@ -113,7 +50,7 @@
 </header>
 <!-- Mobile menu (hidden by default) -->
 <nav id="mobileMenu" class="hidden bg-[#ff0000] text-white font-semibold text-sm flex flex-col space-y-1 px-1 py-3 md:hidden">
-  <a href="index.html" class="active block px-4 py-2 rounded hover:underline transition">Beranda</a>
+  <a href="beranda.html" class="active block px-4 py-2 rounded hover:underline transition">Beranda</a>
   <a href="jadwal.html" class="block px-4 py-2 rounded hover:underline transition">Jadwal</a>
   <a href="klasemen.html" class="block px-4 py-2 rounded hover:underline transition">Klasemen</a>
   <a href="hasil-tanding.html" class="block px-4 py-2 rounded hover:underline transition">Hasil Tanding</a>
@@ -286,7 +223,7 @@
       <!-- Middle links and mission -->
       <div class="flex-1 min-w-[18rem] max-w-xs">
         <nav class="mb-3 space-y-2 font-semibold">
-          <a href="index.html" class="block hover:underline">Beranda</a>
+          <a href="beranda.html" class="block hover:underline">Beranda</a>
           <a href="jadwal.html" class="block hover:underline active">Jadwal</a>
           <a href="klasemen.html" class="block hover:underline">Klasemen</a>
           <a href="hasil-tanding.html" class="block hover:underline">Hasil Tanding</a>
@@ -328,86 +265,6 @@
       © 2025 Ciamj. Hak Cipta Dilindungi Undang-Undang.
     </div>
   </footer>
-<script>
-  const hamburgerBtn = document.getElementById('hamburgerBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  hamburgerBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-
-  document.addEventListener('DOMContentLoaded', function() {
-    const rowsPerPage = 5; // Jumlah baris per halaman
-    const table = document.getElementById('jadwalTable');
-    const tbody = table.getElementsByTagName('tbody')[0];
-    const rows = tbody.getElementsByTagName('tr');
-    const pagination = document.getElementById('pagination');
-    const totalRows = rows.length;
-    const totalPages = Math.ceil(totalRows / rowsPerPage);
-    let currentPage = 1;
-
-    function displayRows(page) {
-        let start = (page - 1) * rowsPerPage;
-        let end = start + rowsPerPage;
-
-        // Sembunyikan semua baris
-        for (let i = 0; i < totalRows; i++) {
-            rows[i].style.display = 'none';
-        }
-
-        // Tampilkan baris sesuai halaman
-        for (let i = start; i < end && i < totalRows; i++) {
-            rows[i].style.display = '';
-        }
-    }
-
-    function setupPagination() {
-        pagination.innerHTML = '';
-
-        // Tombol Prev
-        let prevBtn = document.createElement('button');
-        prevBtn.innerText = '«';
-        prevBtn.disabled = currentPage === 1;
-        prevBtn.onclick = function() {
-            if (currentPage > 1) {
-                currentPage--;
-                updateTable();
-            }
-        };
-        pagination.appendChild(prevBtn);
-
-        // Tombol halaman
-        for (let i = 1; i <= totalPages; i++) {
-            let pageBtn = document.createElement('button');
-            pageBtn.innerText = i;
-            if (i === currentPage) pageBtn.disabled = true;
-            pageBtn.onclick = function() {
-                currentPage = i;
-                updateTable();
-            };
-            pagination.appendChild(pageBtn);
-        }
-
-        // Tombol Next
-        let nextBtn = document.createElement('button');
-        nextBtn.innerText = '»';
-        nextBtn.disabled = currentPage === totalPages;
-        nextBtn.onclick = function() {
-            if (currentPage < totalPages) {
-                currentPage++;
-                updateTable();
-            }
-        };
-        pagination.appendChild(nextBtn);
-    }
-
-    function updateTable() {
-        displayRows(currentPage);
-        setupPagination();
-    }
-
-    updateTable(); // inisialisasi tampilan tabel dan pagination
-});
-
-</script>
+<script src="jadwal.js"></script>
 </body>
 </html>
