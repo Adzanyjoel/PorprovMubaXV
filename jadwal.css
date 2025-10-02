@@ -7,33 +7,107 @@
       background-color: #ff0000;
     }
 
-            /* Pagination */
-        .pagination {
-            margin-top: 15px;
-            text-align: center;
-        }
-        .pagination button,
-        .pagination span {
-            margin: 0 2px;
-            padding: 5px 9px;
-            border-radius: 3px;
-            cursor: pointer;
-            border: 1px solid gray;
-            background-color: #eeee;
-            color: gray;
-            font-weight: bold;
-        }
-        .pagination button:hover {
-            background-color: gray;
-            color: white;
-        }
-        .pagination .active {
-            background-color: gray;
-            color: #fff;
-            cursor: default;
-            font-weight: 900;
-            border-color: black;
-        }
+    /* Filter Section Styles */
+    .filter-section {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Form Controls */
+    select {
+      appearance: none;
+      background-color: white;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 14px;
+      transition: all 0.2s ease;
+    }
+
+    select:focus {
+      outline: none;
+      border-color: #ef4444;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+    }
+
+    select:hover{
+      border-color: #9ca3af;
+    }
+
+    /* Custom select arrow */
+    select {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+      background-position: right 8px center;
+      background-repeat: no-repeat;
+      background-size: 16px;
+      padding-right: 32px;
+    }
+
+
+    /* Results counter */
+    .results-counter {
+      font-weight: 500;
+      color: #6b7280;
+    }
+
+    /* No results styling */
+    .no-results {
+      text-align: center;
+      padding: 2rem;
+      color: #6b7280;
+    }
+
+    .no-results i {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #d1d5db;
+    }
+
+    /* Category badges */
+    .category-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 9999px;
+      border: 1px solid;
+    }
+
+
+
+    /* Pagination */
+    .pagination {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .pagination button,
+    .pagination span {
+      margin: 0 2px;
+      padding: 5px 9px;
+      border-radius: 3px;
+      cursor: pointer;
+      border: 1px solid gray;
+      background-color: #eeee;
+      color: gray;
+      font-weight: bold;
+    }
+
+    .pagination button:hover {
+      background-color: gray;
+      color: white;
+    }
+
+    .pagination .active {
+      background-color: gray;
+      color: #fff;
+      cursor: default;
+      font-weight: 900;
+      border-color: black;
+    }
 
     footer {
       background-color: #ff0000;
@@ -59,4 +133,46 @@
     }
     .footer-logo img:hover, .footer-mascots img:hover {
       transform: scale(1.2);
+    }
+
+
+    /* Responsive table adjustments */
+    @media (max-width: 768px) {
+      /* Hide less critical columns on small screens */
+      table th:nth-child(3), 
+      table td:nth-child(3) {
+        display: none;
+      }
+      
+      /* Adjust font size for better fit */
+      table {
+        font-size: 0.8rem;
+      }
+      
+      table th, table td {
+        padding: 0.5rem 0.25rem;
+      }
+
+      .filter-section .flex {
+        flex-direction: column;
+      }
+      
+      .filter-section .flex > div {
+        width: 100% !important;
+        max-width: none !important;
+        min-width: auto !important;
+      }
+
+      .filter-section button {
+        margin-top: 1rem;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 640px) {
+      /* Further hide columns on very small screens */
+      table th:nth-child(5), 
+      table td:nth-child(5) {
+        display: none;
+      }
     }

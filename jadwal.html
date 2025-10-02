@@ -62,14 +62,73 @@
     <h2 class="text-2xl sm:text-3xl font-semibold text-black-600 mb-0 select-text"><strong>JADWAL PERTANDINGAN</strong></h2>
     <p class="uppercase tracking-widest text-xs font-bold text-gray-700 leading-snug mb-6 select-text">PEKAN OLAHRAGA PROVINSI SUMSEL XV 2025</p>
 
+    <!-- Filter Section -->
+    <section class="mb-6 bg-white rounded-lg shadow-sm p-4">
+      <div class="flex flex-wrap gap-4 items-center justify-center">
+        <!-- Date Filter -->
+        <div class="flex-1 min-w-[100px] max-w-[125px]">
+          <label for="dateFilter" class="block text-sm font-medium text-gray-700 mb-1">Tanggal</label>
+          <select type="date" id="dateFilter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent" data-testid="date-filter">
+            <option value="">Tanggal</option>
+          </select>
+        </div>
+
+        <!-- Sport Type Filter -->
+        <div class="flex-1 min-w-[100px] max-w-[125px]">
+          <label for="sportFilter" class="block text-sm font-medium text-gray-700 mb-1">Cabor</label>
+          <select id="sportFilter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent" data-testid="sport-filter">
+            <option value="">Semua Cabor</option>
+          </select>
+        </div>
+
+        <!-- Kategory Type Filter -->
+        <div class="flex-1 min-w-[100px] max-w-[150px]">
+          <label for="categoryFilter" class="block text-sm font-medium text-gray-700 mb-1">Kategori</label>
+          <select id="categoryFilter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent" data-testid="category-filter">
+            <option value="">Kategori</option>
+          </select>
+        </div>
+
+        <!-- Gender Type Filter -->
+        <div class="flex-1 min-w-[100px] max-w-[150px]">
+          <label for="genderFilter" class="block text-sm font-medium text-gray-700 mb-1">Gender</label>
+          <select id="genderFilter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent" data-testid="gender-filter">
+            <option value="">Gender</option>
+          </select>
+        </div>
+
+        <!-- Status Filter -->
+        <div class="flex-1 min-w-[100px] max-w-[150px]">
+          <label for="statusFilter" class="block text-sm font-medium text-gray-700 mb-1">Status</label>
+          <select id="statusFilter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent" data-testid="status-filter">
+            <option value="">Semua Status</option>
+          </select>
+        </div>
+
+        <!-- Clear Filters Button -->
+        <div class="flex items-end">
+          <button id="clearFilters" class="bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-md transition duration-300 mt-6" data-testid="clear-filters-btn">
+            <i class="fas fa-times mr-2"></i>Clear
+          </button>
+        </div>
+      </div>
+
+      <!-- Results Counter -->
+      <div class="mt-4 text-sm text-gray-600 text-center" data-testid="results-counter">
+        <span id="resultsCounter">Menampilkan semua pertandingan</span>
+      </div>
+    </section>
+
     <!-- Jadwal Table -->
     <section>
       <div class="overflow-x-auto">
-        <table class="min-w-full table-auto border-collapse text-sm" id="jadwalTable" cellpadding="5" cellspacing="0">
+        <table class="min-w-full table-auto border-collapse text-sm bg-white rounded-lg shadow-sm" id="jadwalTable" cellpadding="9" cellspacing="0" data-testid="schedule-table">
           <thead class="bg-gray-200 text-gray-700">
             <tr>
               <th class="px-4 py-3 text-center font-semibold">Tanggal</th>
-              <th class="px-4 py-3 text-center font-semibold">Cabor</th>
+              <th class="px-4 py-3 text-center font-semibold">Cabang Olahraga</th>
+              <th class="px-4 py-3 text-center font-semibold">Kategori</th>
+              <th class="px-4 py-3 text-center font-semibold">Gender</th>
               <th class="px-4 py-3 text-center font-semibold">Pertandingan</th>
               <th class="px-4 py-3 text-center font-semibold">Jam</th>
               <th class="px-4 py-3 text-center font-semibold">Tempat</th>
@@ -77,116 +136,21 @@
               <th class="px-4 py-3 text-center font-semibold">Status</th>
             </tr>
           </thead>
-
-          <tbody class="text-gray-800">
-              <!-- Pertandingan -->
-            <tr class="border-b hover:bg-gray-50 transition duration-200">
-              <td class="px-4 py-4 text-center font-medium">7 Sep 2025</td>
-              <td class="px-4 py-4 text-center">Bola Basket 3x3 Putra</td>
-              <td class="px-4 py-4 flex items-center justify-center space-x-4">
-                <div class="flex flex-col items-center">
-                  <img src="img/Logo Kab Muba.jpg" title="Musi Banyuasin" alt="Logo Kab Muba" class="w-10 h-10 rounded-full border border-blue-500" />
-                  <span class="text-xs font-semibold mt-1">MUBA</span>
-                </div>
-                <span class="font-bold text-lg">vs</span>
-                <div class="flex flex-col items-center">
-                  <img src="" alt="Logo" title="Palembang" class="w-10 h-10 rounded-full border border-red-500" />
-                  <span class="text-xs font-semibold mt-1">PALEMBANG</span>
-                </div>
-              </td>
-              <td class="px-4 py-4 text-center">15:00 WIB</td>
-              <td class="px-4 py-4 text-center"><a href="https://maps.app.goo.gl/QzKgiFRnm7Gewx3L9" title="Klik untuk Map Venue" target="_blank" class="hover:underline"> Stabel Berkuda Sekayu</a></td>
-              <td class="px-4 py-4 text-center">
-                <a href="https://www.youtube.com/@MusiBanyuasinTV"  target="_blank" rel="noopener noreferrer"
-                   class="inline-block bg-[#ff0000] hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 text-xs">
-                  Tonton Sekarang
-                </a>
-              </td>
-              <!-- Status Pertandingan -->
-              <td class="px-3 py-3 text-center">
-                <span class="text-black-800 px-2 py-1 rounded text-xs font-semibold">Final</span>
-              </td>
-            </tr>
-              <!-- Pertandingan -->
-            <tr class="border-b hover:bg-gray-50 transition duration-200">
-              <td class="px-4 py-4 text-center font-medium">7 Sep 2025</td>
-              <td class="px-4 py-4 text-center">Sepak Bola</td>
-              <td class="px-4 py-4 flex items-center justify-center space-x-4">
-                <div class="flex flex-col items-center">
-                  <img src="" alt="Logo" title="Muara Enim" class="w-10 h-10 rounded-full border border-green-500" />
-                  <span class="text-xs font-semibold mt-1">MUARA ENIM</span>
-                </div>
-                <span class="font-bold text-lg">vs</span>
-                <div class="flex flex-col items-center">
-                  <img src="" alt="Logo" title="Banyuasin" class="w-10 h-10 rounded-full border border-purple-500" />
-                  <span class="text-xs font-semibold mt-1">BANYUASIN</span>
-                </div>
-              </td>
-              <td class="px-4 py-4 text-center">18:00 WIB</td>
-              <td class="px-4 py-4 text-center"><a href="https://maps.app.goo.gl/nLG4KSho8vxGc6sm6" title="Klik untuk Map Venue" target="_blank" class="hover:underline"> Stadion Serasan Sekate Sekayu</a></td>
-              <td class="px-4 py-4 text-center">
-                <a href="https://www.instagram.com/porprovsumselxv" target="_blank" rel="noopener noreferrer"
-                   class="inline-block bg-[#ff0000] hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 text-xs">
-                  Tonton Sekarang
-                </a>
-              </td>
-              <!-- Status Pertandingan -->
-              <td class="px-3 py-3 text-center">
-                <span class="text-black-800 px-2 py-1 rounded text-xs font-semibold">Top 8</span>
-              </td>
-            </tr>
-
-
-
-            <!-- Pertandingan grup/Kelompok -->
-            <tr class="border-b hover:bg-gray-50 transition duration-200">
-              <td class="px-4 py-4 text-center font-medium">7 Sep 2025</td>
-              <td class="px-4 py-4 text-center">ATLETIK 200 M PUTRA</td>
-              <td class="px-4 py-4 flex items-center justify-center space-x-4">
-                <div class="flex flex-col items-center">
-                  <img src="img/Logo Kab Muba.jpg" alt="Logo Kab Muba" class="w-5 h-5 rounded-full border border-cyan-500" />
-                  <span class="text-xs font-semibold mt-1">MUBA</span>
-                  <img src="" alt="Logo Kab Pali" class="w-5 h-5 rounded-full border border-cyan-500" />
-                  <span class="text-xs font-semibold mt-1">PALI</span>
-                </div>
-                </div>
-                <div class="flex flex-col items-center">
-                  <img src="" alt="Logo Kab Lahat" class="w-5 h-5 rounded-full border border-cyan-500" />
-                  <span class="text-xs font-semibold mt-1">LAHAT</span>
-                  <img src="" alt="Logo Kab Muara Enim" class="w-5 h-5 rounded-full border border-cyan-500" />
-                  <span class="text-xs font-semibold mt-1">M.ENIM</span>
-                </div>
-                <div class="flex flex-col items-center">
-                  <img src="" alt="Logo Kab Empat Lawang" class="w-5 h-5 rounded-full border border-cyan-500" />
-                  <span class="text-xs font-semibold mt-1">E.LAWANG</span>
-                  <img src="" alt="Logo Lubuk Linggau" class="w-5 h-5 rounded-full border border-cyan-500" />
-                  <span class="text-xs font-semibold mt-1">L.LINGGAU</span>
-                </div>
-                <div class="flex flex-col items-center">
-                  <img src="" alt="Logo Tim Semarang showing a harbor crane with a volleyball icon in an industrial theme" class="w-5 h-5 rounded-full border border-cyan-500" />
-                  <span class="text-xs font-semibold mt-1">OKUT</span>
-                  <img src="" alt="Logo Tim Semarang showing a harbor crane with a volleyball icon in an industrial theme" class="w-5 h-5 rounded-full border border-cyan-500" />
-                  <span class="text-xs font-semibold mt-1">OKUS</span>
-                </div>
-              </td>
-              <td class="px-4 py-4 text-center">10:30 WIB</td>
-              <td class="px-4 py-4 text-center"><a href="https://maps.app.goo.gl/nLG4KSho8vxGc6sm6" title="Klik untuk Map Venue" target="_blank" class="hover:underline"> Stadion Serasan Sekate Sekayu</a></td>
-              <td class="px-4 py-4 text-center">
-                <a href="done.html" target="_blank" rel="noopener noreferrer"
-                   class="inline-block bg-[#ff0000] hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 text-xs">
-                  Tonton Sekarang
-                </a>
-              </td>
-           <!-- Status Pertandingan -->
-              <td class="px-1 py-1 text-center">
-                <span class=" text-white-800 rounded text-xs font-semibold">-</span>
-              </td>
-            </tr>
+          <tbody class="text-gray-800" id="tableBody">
+            <!-- Table content will be populated by JavaScript -->
           </tbody>
         </table>
       </div>
+      
+      <!-- No Results Message -->
+      <div id="noResults" class="hidden text-center py-8 text-gray-500" data-testid="no-results-message">
+        <i class="fas fa-search text-4xl mb-4"></i>
+        <p class="text-lg font-medium">Tidak ada pertandingan yang sesuai dengan filter</p>
+        <p class="text-sm">Coba ubah kriteria pencarian Anda</p>
+      </div>
+
       <div id="pagination" class="pagination"></div>
-      </section>
+    </section>
   </main>
 
   <!-- Footer-->
