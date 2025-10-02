@@ -176,7 +176,7 @@ const matchesData = [
 // Global variables
 let filteredMatches = [...matchesData];
 let currentPage = 1;
-const rowsPerPage = 15;
+const rowsPerPage = 10;
 
 // DOM elements
 const hamburgerBtn = document.getElementById('hamburgerBtn');
@@ -325,20 +325,39 @@ function displayMatches() {
   });
 }
 
-
+// Create category badge with color coding
+function createGenderBadge(gender) {
+  let badgeClass = '';
+  let badgeText = gender;
+  
+  switch(gender) {
+    case 'PUTRA':
+      badgeClass = 'bg-blue-100 text-blue-800 border border-blue-300';
+      break;
+    case 'PUTRI':
+      badgeClass = 'bg-pink-100 text-pink-800 border border-pink-300';
+      break;
+    default:
+      badgeClass = 'bg-gray-100 text-gray-800 border border-gray-300';
+  }
+  
+  return `<span class=\"${badgeClass} px-2 py-1 rounded-full text-xs font-semibold\">${badgeText}</span>`;
+}
 
 // Create a match row
 function createMatchRow(match) {
   const row = document.createElement('tr');
   row.className = 'border-b hover:bg-gray-50 transition duration-200';
 
+    // Create category badge with color coding
+  const genderBadge = createGenderBadge(match.gender);
 
   
   row.innerHTML = `
-    <td class="text-center font-medium">${match.date}</td>
+    <td class="text-center font-semibold">${match.date}</td>
     <td class="text-center">${match.sport}</td>
     <td class="text-center">${match.category}</td>
-    <td class="text-center">${match.gender}</td>
+    <td class="text-center">${genderBadge}</td>
     <td class="px-4 py-4 ${match.isGroupEvent ? 'text-center' : 'flex items-center justify-center space-x-6'}">
       ${createTeamsDisplay(match)}
     </td>
