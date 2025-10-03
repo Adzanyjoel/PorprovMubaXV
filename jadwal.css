@@ -139,8 +139,8 @@
     /* Responsive table adjustments */
     @media (max-width: 768px) {
        /* Hide venue column on medium screens (less critical) */
-      table th:nth-child(6), 
-      table td:nth-child(6) {
+      table th:nth-child(9), 
+      table td:nth-child(9) {
         display: none;
       }
       
@@ -171,8 +171,8 @@
 
     @media (max-width: 640px) {
       /* Hide streaming column on very small screens */
-      table th:nth-child(7), 
-      table td:nth-child(7) {
+      table th:nth-child(9), 
+      table td:nth-child(9) {
         display: none;
       }
     }

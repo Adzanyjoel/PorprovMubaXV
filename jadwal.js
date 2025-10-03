@@ -10,7 +10,8 @@ const matchesData = [
     teams: ["MUSI BANYUASIN", "PALEMBANG"],
     teamLogos: ["img/Logo Kab Muba.jpg", ""],
     time: "15:00 WIB",
-    venue: "Stabel Berkuda",
+    // Stabel Berkuda
+    venue: "Maps Venue",
     venueLink: "https://maps.app.goo.gl/QzKgiFRnm7Gewx3L9",
     streamingLink: "https://www.youtube.com/@MusiBanyuasinTV",
     streamingText: "Tonton Sekarang",
@@ -25,7 +26,8 @@ const matchesData = [
     teams: ["MUARA ENIM", "BANYUASIN"],
     teamLogos: ["", ""],
     time: "18:00 WIB",
-    venue: "Stadion Serasan Sekate",
+    // Stadion Serasan Sekate
+    venue: "Maps Venue",
     venueLink: "https://maps.app.goo.gl/nLG4KSho8vxGc6sm6",
     streamingLink: "https://www.instagram.com/porprovsumselxv",
     streamingText: "Tonton Sekarang",
@@ -38,9 +40,10 @@ const matchesData = [
     category: "200 M Gaya Kupu-Kupu",
     gender: "PUTRA",
     teams: ["MUSI BANYUASIN" , "LUBUK LINGGAU", "MUARA ENIM", "EMPAT LAWANG", "OKU UTARA", "OKU SELATAN", "PALI", "LAHAT"],
-    teamLogos: ["img/Logo Kab Muba.jpg", "", "", "", "", "", "", ""],
+    teamLogos: ["img/Logo Kab Muba.jpg", "img/Logo Kab Muba.jpg", "img/Logo Kab Muba.jpg", "img/Logo Kab Muba.jpg", "img/Logo Kab Muba.jpg", "img/Logo Kab Muba.jpg", "img/Logo Kab Muba.jpg", "img/Logo Kab Muba.jpg"],
     time: "10:30 WIB",
-    venue: "Stadion Serasan Sekate",
+    // Stadion Serasan Sekate
+    venue: "Maps Venue",
     venueLink: "https://maps.app.goo.gl/nLG4KSho8vxGc6sm6",
     streamingLink: "done.html",
     streamingText: "Tonton Sekarang",
@@ -50,127 +53,24 @@ const matchesData = [
   {
     id: 4,
     date: "20 Okt 2025",
-    sport: "PENCAK SILAT",
-    category:"KELAS A 40-45 KG",
-    gender: "PUTRA",
-    teams: ["MUARA ENIM", "BANYUASIN"],
-    teamLogos: ["", ""],
-    time: "18:00 WIB",
-    venue: "Stadion Serasan Sekate",
-    venueLink: "https://maps.app.goo.gl/nLG4KSho8vxGc6sm6",
-    streamingLink: "https://www.instagram.com/porprovsumselxv",
-    streamingText: "Tonton Sekarang",
-    status: "Juara 3"
-  },
-  // Tanggal 19 Okt 2025
-  {
-    id: 1,
-    date: "19 Okt 2025",
-    sport: "BOLA BASKET",
-    category: "3x3",
-    gender: "PUTRA",
-    teams: ["MUSI BANYUASIN", "PALEMBANG"],
-    teamLogos: ["img/Logo Kab Muba.jpg", ""],
-    time: "15:00 WIB",
-    venue: "Stabel Berkuda",
-    venueLink: "https://maps.app.goo.gl/QzKgiFRnm7Gewx3L9",
-    streamingLink: "https://www.youtube.com/@MusiBanyuasinTV",
-    streamingText: "Tonton Sekarang",
-    status: "Final"
-  },
-  {
-    id: 2,
-    date: "19 Okt 2025",
-    sport: "SEPAK BOLA",
-    category:"-",
-    gender: "PUTRA",
-    teams: ["MUARA ENIM", "BANYUASIN"],
-    teamLogos: ["", ""],
-    time: "18:00 WIB",
-    venue: "Stadion Serasan Sekate",
-    venueLink: "https://maps.app.goo.gl/nLG4KSho8vxGc6sm6",
-    streamingLink: "https://www.instagram.com/porprovsumselxv",
-    streamingText: "Tonton Sekarang",
-    status: "Semi Final"
-  },
-  {
-    id: 3,
-    date: "19 Okt 2025",
-    sport: "ATLETIK",
+    sport: "RENANG",
     category: "200 M Gaya Kupu-Kupu",
     gender: "PUTRA",
     teams: ["MUSI BANYUASIN" , "LUBUK LINGGAU", "MUARA ENIM", "EMPAT LAWANG", "OKU UTARA", "OKU SELATAN", "PALI", "LAHAT"],
     teamLogos: ["img/Logo Kab Muba.jpg", "", "", "", "", "", "", ""],
     time: "10:30 WIB",
-    venue: "Stadion Serasan Sekate",
-    venueLink: "https://maps.app.goo.gl/nLG4KSho8vxGc6sm6",
-    streamingLink: "done.html",
-    streamingText: "Tonton Sekarang",
-    status: "-",
-    isGroupEvent: true
-  },
-  {
-    id: 4,
-    date: "19 Okt 2025",
-    sport: "SEPAK BOLA",
-    category:"-",
-    gender: "PUTRA",
-    teams: ["MUARA ENIM", "BANYUASIN"],
-    teamLogos: ["", ""],
-    time: "18:00 WIB",
-    venue: "Stadion Serasan Sekate",
-    venueLink: "https://maps.app.goo.gl/nLG4KSho8vxGc6sm6",
-    streamingLink: "https://www.instagram.com/porprovsumselxv",
-    streamingText: "Tonton Sekarang",
-    status: "Juara 3"
-  },
-  // Tanggal 18 Okt 2025
-  {
-    id: 1,
-    date: "18 Okt 2025",
-    sport: "BOLA BASKET",
-    category: "3x3",
-    gender: "PUTRI",
-    teams: ["MUSI BANYUASIN", "PALEMBANG"],
-    teamLogos: ["img/Logo Kab Muba.jpg", ""],
-    time: "15:00 WIB",
-    venue: "Stabel Berkuda",
-    venueLink: "https://maps.app.goo.gl/QzKgiFRnm7Gewx3L9",
-    streamingLink: "https://www.youtube.com/@MusiBanyuasinTV",
-    streamingText: "Tonton Sekarang",
-    status: "Final"
-  },
-  {
-    id: 2,
-    date: "18 Okt 2025",
-    sport: "SEPAK BOLA",
-    category:"-",
-    gender: "PUTRI",
-    teams: ["MUARA ENIM", "BANYUASIN"],
-    teamLogos: ["", ""],
-    time: "18:00 WIB",
-    venue: "Stadion Serasan Sekate",
-    venueLink: "https://maps.app.goo.gl/nLG4KSho8vxGc6sm6",
-    streamingLink: "https://www.instagram.com/porprovsumselxv",
-    streamingText: "Tonton Sekarang",
-    status: "Top 8"
-  },
-  {
-    id: 3,
-    date: "18 Okt 2025",
-    sport: "ATLETIK",
-    category: "200 M Gaya Bebas",
-    gender: "PUTRI",
-    teams: ["MUSI BANYUASIN" , "LUBUK LINGGAU", "MUARA ENIM", "EMPAT LAWANG", "OKU UTARA", "OKU SELATAN", "PALI", "LAHAT"],
-    teamLogos: ["img/Logo Kab Muba.jpg", "", "", "", "", "", "", ""],
-    time: "10:30 WIB",
-    venue: "Stadion Serasan Sekate",
+    // Stadion Serasan Sekate
+    venue: "Maps Venue",
     venueLink: "https://maps.app.goo.gl/nLG4KSho8vxGc6sm6",
     streamingLink: "done.html",
     streamingText: "Tonton Sekarang",
     status: "-",
     isGroupEvent: true
   }
+  // Tanggal 19 Okt 2025
+
+  // Tanggal 18 Okt 2025
+
 ];
 
 // Global variables
@@ -347,7 +247,7 @@ function createGenderBadge(gender) {
 // Create a match row
 function createMatchRow(match) {
   const row = document.createElement('tr');
-  row.className = 'border-b hover:bg-gray-50 transition duration-200';
+  row.className = 'border-b hover:bg-gray-200 transition duration-400';
 
     // Create category badge with color coding
   const genderBadge = createGenderBadge(match.gender);
@@ -355,19 +255,20 @@ function createMatchRow(match) {
   
   row.innerHTML = `
     <td class="text-center font-semibold">${match.date}</td>
-    <td class="text-center">${match.sport}</td>
-    <td class="text-center">${match.category}</td>
-    <td class="text-center">${genderBadge}</td>
-    <td class="px-4 py-4 ${match.isGroupEvent ? 'text-center' : 'flex items-center justify-center space-x-6'}">
+    <td class="text-center font-semibold">${match.sport}</td>
+    <td class="text-center font-semibold">${match.category}</td>
+    <td class="text-center font-semibold">${genderBadge}</td>
+    <td class="px-4 py-8 ${match.isGroupEvent ? 'text-center' : 'flex items-center justify-center space-x-4'}">
       ${createTeamsDisplay(match)}
     </td>
-    <td class="text-center">${match.time}</td>
+    <td class="text-center font-semibold">${match.time}</td>
     <td class="px-4 py-4 text-center">
-      <a href="${match.venueLink}" title="Klik untuk Map Venue" target="_blank" class="hover:underline">${match.venue}</a>
-    </td>
-    <td class="px-4 py-4 text-center">
+      <a href="${match.venueLink}" target="_blank" rel="noopener noreferrer"
+         class="inline-block bg-[#ff0000] hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-md transition duration-300 text-xs">
+        ${match.venue}
+      </a>
       <a href="${match.streamingLink}" target="_blank" rel="noopener noreferrer"
-         class="inline-block bg-[#ff0000] hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 text-xs">
+         class="inline-block bg-[#ff0000] mt-1 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-md transition duration-300 text-xs">
         ${match.streamingText}
       </a>
     </td>
@@ -383,13 +284,13 @@ function createMatchRow(match) {
 function createTeamsDisplay(match) {
   if (match.isGroupEvent) {
     // For group events (like athletics with multiple participants)
-    let teamsHtml = '<div class="flex flex-wrap justify-center gap-2">';
+    let teamsHtml = '<div class="grid grid-flow-col grid-rows-2">';
     match.teams.forEach((team, index) => {
       const logo = match.teamLogos[index] || '';
       teamsHtml += `
-        <div class="flex flex-col items-center">
-          ${logo ? `<img src="${logo}" alt="Logo ${team}" class="w-5 h-5 rounded-full border border-cyan-500" />` : '<div class="w-5 h-5 rounded-full border border-cyan-500 bg-gray-200"></div>'}
-          <span class="text-xs font-semibold ">${team}</span>
+        <div class="text-center flex items-center justify-center m-1 p-1">
+          ${logo ? `<img src="${logo}" alt="Logo ${team}" class="w-6 h-6 rounded-full border border-cyan-500" />` : '<div class="w-6 h-6 rounded-full border border-red-500 bg-gray-200"></div>'}
+          <span class="text-xs ml-1 font-bold ">${team}</span>
         </div>
       `;
     });
@@ -403,14 +304,14 @@ function createTeamsDisplay(match) {
     const logo2 = match.teamLogos[1] || '';
 
     return `
-      <div class="flex flex-col items-center">
-        ${logo1 ? `<img src="${logo1}" title="${team1}" alt="Logo ${team1}" class="w-8 h-8 rounded-full border border-blue-500" />` : '<div class="w-8 h-8 rounded-full border border-blue-500 bg-gray-200"></div>'}
-        <span class="text-xs font-semibold mt-1">${team1}</span>
+      <div class="flex flex-col mt-6 items-center">
+        ${logo1 ? `<img src="${logo1}" title="${team1}" alt="Logo ${team1}" class="w-12 h-12 rounded-full border border-blue-500" />` : '<div class="w-12 h-12 rounded-full border border-blue-500 bg-gray-200"></div>'}
+        <span class="text-xs font-bold mt-1">${team1}</span>
       </div>
-      <span class="font-bold text-lg">vs</span>
-      <div class="flex flex-col items-center">
-        ${logo2 ? `<img src="${logo2}" title="${team2}" alt="Logo ${team2}" class="w-8 h-8 rounded-full border border-red-500" />` : '<div class="w-8 h-8 rounded-full border border-red-500 bg-gray-200"></div>'}
-        <span class="text-xs font-semibold mt-1">${team2}</span>
+      <span class="font-bold auto text-lg mt-2">vs</span>
+      <div class="flex flex-col mt-6 items-center">
+        ${logo2 ? `<img src="${logo2}" title="${team2}" alt="Logo ${team2}" class="w-12 h-12 rounded-full border border-red-500" />` : '<div class="w-12 h-12 rounded-full border border-red-500 bg-gray-200"></div>'}
+        <span class="text-xs font-bold mt-1">${team2}</span>
       </div>
     `;
   }
